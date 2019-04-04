@@ -42,7 +42,7 @@ if not rs.eof then
         <tr height="20" bgcolor="#FFFFFF" align="center">
           <td>ÃÜ&nbsp;&nbsp;Âë£º</td>
           <td><div align="left">
-              <input name="pass" type="password" size="33" value="<%=rs("pass")%>">
+              <input name="pass" type="password" size="30" value="<%=rs("pass")%>">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">

@@ -8,8 +8,8 @@ Conn.Open ConnStr
 %>
 
 <head>
-<title>音像租赁管理系统</title>
-<script>top.document.title="音像租赁管理系统";</script>
+<title>仪器中心管理系统</title>
+<script>top.document.title="仪器中心管理系统";</script>
 <style>
 BODY {
 	font-family: "宋体";

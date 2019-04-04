@@ -46,6 +46,7 @@ end if
           </tr>
         </table>
 <%
+Sum=0
 if request("order")<>"" then
 	SafeRequest(request("order"))
 	sql="select * from [order] where didanhao='"&request("order")&"';"
@@ -80,7 +81,7 @@ if request("order")<>"" then
     </table>
       <table border="0" cellspacing="1" cellpadding="4" align="center" width="100％" bgcolor="BDBDBC">
         <tr bgcolor="#FFFFFF" height="25" align="center">
-          <td width="300">商 品 名 称</td>
+          <td width="300">仪 器 名 称</td>
           <td width="40">数量</td>
           <td width="60">出租价格</td>
           
@@ -129,7 +130,7 @@ if request("order")<>"" then
 			sql2="select * from [information] where id="&trim(information(i))&""
 			set rs2=Server.CreateObject("ADODB.Recordset")
 			rs2.open sql2,conn,3,3
-			response.Write(rs2("huiyuan"))
+			response.Write(rs2("shichang"))
 			response.Write("<br>")
 			rs2.close
 			set rs2=nothing
@@ -142,26 +143,18 @@ if request("order")<>"" then
 			sql2="select * from [information] where id="&trim(information(i))&""
 			set rs2=Server.CreateObject("ADODB.Recordset")
 			rs2.open sql2,conn,3,3
-			response.Write(rs2("huiyuan"))
+            Sum=Sum+rs2("shichang")*shuliang(i)
+			response.Write(rs2("shichang")*shuliang(i))
 			response.Write("<br>")
 			rs2.close
 			set rs2=nothing
 		next
 %>
 		  </td>
-          <td>
-<%
-		for i=0 to ubound(shuliang)
-			sql2="select * from [information] where id="&trim(information(i))&""
-			set rs2=Server.CreateObject("ADODB.Recordset")
-			rs2.open sql2,conn,3,3
-			response.Write(rs2("huiyuan")*shuliang(i))
-			response.Write("<br>")
-			rs2.close
-			set rs2=nothing
-		next
-%>
-		  </td>
+        </tr> 
+        <tr bgcolor="#FFFFFF" height="25"align="center">
+          <td align="left" colspan="5">
+            <%if session("je")<100 Then response.Write("铜牌会员九折 总计："&Sum*0.9) else if  session("je")>100 and session("je")<500 Then response.Write("银牌会员八折 总计："&Sum*0.8)   else if   session("je")>500 Then response.Write("金牌会员七折 总计："&Sum*0.7)    end if %></td>
         </tr> 
     </table>
 <table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="BDBDBC">

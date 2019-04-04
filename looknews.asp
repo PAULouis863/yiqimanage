@@ -65,4 +65,4 @@ set rs=nothing
   <tr>
     <td colspan="3"><!--#include file="foot.asp" --></td>
   </tr>
-</table>
+</table> 

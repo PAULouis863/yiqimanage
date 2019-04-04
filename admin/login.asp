@@ -33,7 +33,7 @@ function login()
       <td width="31%">&nbsp;</td>
     </tr>
     <tr>
-      <td height="26"><div align="right" class="style2"><strong>Ум&nbsp;&nbsp;ТыЃК</strong></div></td>
+      <td height="26"><div align="right" class="style2"><strong>Ум&nbsp;ТыЃК</strong></div></td>
       <td><input name="pass" type="password"></td>
       <td>&nbsp;</td>
     </tr>

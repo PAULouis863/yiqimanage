@@ -64,8 +64,8 @@ rs.open sql,conn,3,3
   <tr>
     <td width="161" rowspan="7"><div align="center"><img src="upfile/<%=rs("tupian")%>" width="110" height="130" border="0"></div></td>
     <td width="22" height="16">&nbsp;</td>
-    <td width="127"><span class="style4">【影片名称】<%=rs("mingcheng")%></span></td>
-    <td width="220" ><span class="style4">【影片简介】<%=rs("jianjie")%></span></td>
+    <td width="127"><span class="style4">【仪器名称】<%=rs("mingcheng")%></span></td>
+    <td width="220" ><span class="style4">【仪器简介】<%=rs("jianjie")%></span></td>
   </tr>
   <tr>
     <td height="16">&nbsp;</td>
@@ -80,19 +80,19 @@ rs.open sql,conn,3,3
   </tr>
   <tr>
     <td height="16">&nbsp;</td>></td>
-    <td><span class="style4">【影片编号】<%=rs("xinghao")%></span></td>
+    <td><span class="style4">【仪器编号】<%=rs("xinghao")%></span></td>
   </tr>
   <tr>
     <td height="19">&nbsp;</td>
-    <td><span class="style4">【<a href="gouwu.asp?ProdId=<%=rs("id")%>">租借影片</a>】</span></td>
-    <td><span class="style4">【影片等级】
+    <td><span class="style4">【<a href="gouwu.asp?ProdId=<%=rs("id")%>">租借仪器</a>】</span></td>
+    <td><span class="style4">【仪器等级】
       <%if rs("dengji")="2" then response.Write("精品") else response.Write("普通")%>
     </span></td>
   </tr>
   <tr>
     <td height="16">&nbsp;</td>
     <td><span class="style4">【浏览次数】<%=rs("cishu")%></span></td>
-    <td><span class="style4">【影片数量】<%=rs("shuliang")%></span></td>
+    <td><span class="style4">【仪器数量】<%=rs("shuliang")%></span></td>
   </tr>
 </table>
 	<table width="100%"  border="0" cellspacing="0" cellpadding="0">
@@ -102,7 +102,7 @@ rs.open sql,conn,3,3
     </table>
 	<table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="31%"><span class="style2">影片介绍：</span></td>
+        <td width="31%"><span class="style2">仪器介绍：</span></td>
         <td width="69%">&nbsp;</td>
       </tr>
       <tr>
@@ -117,7 +117,7 @@ rs.open sql,conn,3,3
     </table>	
 	<table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="31%"><span class="style2">影片备注：</span></td>
+        <td width="31%"><span class="style2">仪器备注：</span></td>
         <td width="69%">&nbsp;</td>
       </tr>
       <tr>

@@ -54,10 +54,10 @@ A.top:hover {
             <td rowspan="2" valign="top"><table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0">
               <tr valign="top">
                 <td width="11%"><div align="center"><a href="index.asp">网站首页</a></div></td>
-                <td width="11%"><div align="center"><a href="newgoods.asp">最新影片</a></div></td>
-                <td width="11%"><div align="center"><a href="commend.asp">推荐影片</a></div></td>
-                <td width="11%"><div align="center"><a href="hot.asp">热门影片</a></div></td>
-                <td width="11%"><div align="center"><a href="sort.asp">影片分类</a></div></td>
+                <td width="11%"><div align="center"><a href="newgoods.asp">新款仪器</a></div></td>
+                <td width="11%"><div align="center"><a href="commend.asp">推荐仪器</a></div></td>
+                <td width="11%"><div align="center"><a href="hot.asp">常用仪器</a></div></td>
+                <td width="11%"><div align="center"><a href="sort.asp">仪器分类</a></div></td>
                 <td width="11%"><div align="center"><a href="idea.asp">意见反馈</a></div></td>
                 <td width="11%"><div align="center"><a href="liuyan.asp">用户留言</a></div></td>
                 <td width="11%"><div align="center"><a href="usercenter.asp">用户中心</a></div></td>
@@ -92,7 +92,7 @@ A.top:hover {
           <tr>
             <td width="9%">&nbsp;</td>
             <td width="6%"><img src="images/sousuo.jpg" width="26" height="24"></td>
-            <td width="51%"><span class="style3"><span class="style1">影片名称搜索</span>&nbsp;&nbsp;
+            <td width="51%"><span class="style3"><span class="style1">仪器名称搜索</span>&nbsp;&nbsp;
                   <input name="search" type="text" size="18">
                   <input name="submit" type="submit" value="GO">
             </span></td>

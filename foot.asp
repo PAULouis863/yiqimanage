@@ -5,7 +5,7 @@
             <td>&nbsp;</td>
           </tr>
           <tr>
-            <td><div align="center">建议使用 IE6.0 或以上版本 <a href="/admin/login.asp">管理员入口</a></div></td>
+            <td><div align="center">仪器中心管理系统 <a href="/admin/login.asp">管理员入口</a></div></td>
           </tr>
         </table></td>
       </tr>

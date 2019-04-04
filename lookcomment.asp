@@ -49,7 +49,7 @@ else
 	for i=1 to rs.pagesize
 %>
 		    <tr>
-              <td>影片名：<%=rs("mingcheng")%></td>
+              <td>仪器名：<%=rs("mingcheng")%></td>
               <td>时间：<%=rs("shijian")%></td>
 		    </tr>
             <tr>

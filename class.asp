@@ -45,7 +45,7 @@ else
            
 				  <tr>
                     <td height="16">&nbsp;</td>
-                    <td>¡¾<a href="#" onClick='javascript:parent.window.location.href="gouwu.asp?ProdId=<%=rs("id")%>&class=class";'>×â½èÓ°Æ¬</a>¡¿</td>
+                    <td>¡¾<a href="#" onClick='javascript:parent.window.location.href="gouwu.asp?ProdId=<%=rs("id")%>&class=class";'>×â½èÒÇÆ÷</a>¡¿</td>
                   </tr>
                   <tr>
                     <td height="16">&nbsp;</td>

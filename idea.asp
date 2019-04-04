@@ -90,7 +90,7 @@ end if
             <input name="user" type="text" value="<%=session("user")%>">&nbsp;&nbsp;&nbsp;&nbsp;
             <select name="leixing">
               <option value="1">对网站的建议</option>
-              <option value="2">对影片的建议</option>            
+              <option value="2">对仪器的建议</option>            
               <option value="3">对服务的投诉</option>
             </select>
           </div></td>

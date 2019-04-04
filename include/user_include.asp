@@ -82,6 +82,19 @@ if not rs.eof then
           <td height="30">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
           <td><div align="left"><%=rs("xingming")%></div></td>
         </tr>
+
+                <tr height="20" bgcolor="#FFFFFF" align="center">
+          <td height="30">会员等级：</td>
+          <td><div align="left"><%if rs("xf")<100 Then response.Write("铜牌会员") else if   rs("xf")>100 and rs("xf")<500 Then response.Write("银牌会员")   else if    rs("xf")>500 Then response.Write("金牌会员")    end if %></div></td>
+        </tr>
+
+
+
+
+
+
+
+
         <tr height="20" bgcolor="#FFFFFF" align="center">
           <td height="30">电&nbsp;&nbsp;&nbsp;&nbsp;话：</td>
           <td><div align="left"><%=rs("tel")%></div></td>
@@ -514,5 +527,5 @@ end if
 rs.close
 set rs=nothing
 %>
-</table>
+</table>  
 <%end sub%>

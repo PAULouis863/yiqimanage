@@ -352,5 +352,5 @@ Public Function MD5(sMessage)
     
     
     MD5=LCase(WordToHex(b) & WordToHex(c))  
-End Function
+End Function 
 %>

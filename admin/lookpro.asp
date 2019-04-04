@@ -14,7 +14,7 @@ end if
 <form name="myform" action="lookpro.asp" method="post">  <tr> 
         <tr>
           <td width="320">&nbsp;</td>
-          <td width="120"><div align="center"><font color="#FFFFFF">影片信息管理</font> </div></td>
+          <td width="120"><div align="center"><font color="#FFFFFF">仪器信息管理</font> </div></td>
           <td width="160">
 <font color="#FFFFFF">所属大类：</font>
 <select name="bigclassid">
@@ -58,14 +58,16 @@ set rs=nothing
     <td valign="top" bgcolor="#FFFFFF"><br> 
       <table width="90%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="799AE1">
         <tr height="20" bgcolor="#FFFFFF" align="center"> 
-          <td width="234"><font color="#FF0000">影片名称</font></td>
+          <td width="234"><font color="#FF0000">仪器名称</font></td>
           <td width="167"><div align="center"><font color="#FF0000">上架时间</font></div></td>
           <td width="139"><font color="#FF0000">出租价格</font></td>
-          <td width="132"><font color="#FF0000">购买价格格</font></td>
+          <td width="132"><font color="#FF0000">购买价格</font></td>
           <td width="100"><font color="#FF0000">修改</font></td>
           <td width="96"><font color="#FF0000">操作</font></td>
         </tr>
 <%
+big=request("bigclassid")
+small=request("classid")
 if request("bigclassid")<>"" and request("classid")<>"" then	'判断是否按指定类别进行查询
 	wh="where bigclassid="&request("bigclassid")&" and classid="&request("classid")&""
 end if
@@ -87,7 +89,7 @@ else
 	rs.absolutepage=page
 	for i=1 to rs.pagesize
 		if rs("shuliang")<20 then
-			response.Write("<script>alert('商品 "&rs("mingcheng")&" 数量已经少于 20！');</script>")	'判断每个商品的库存量是否有20，否则给出提示
+			response.Write("<script>alert('仪器 "&rs("mingcheng")&" 数量已经少于 20！');</script>")	'判断每个仪器的库存量是否有20，否则给出提示
 		end if
 %>
         <tr height="20" bgcolor="#FFFFFF" align="center">
@@ -123,7 +125,7 @@ end if
 rs.close
 set rs=nothing
 %>
-   		  </td>
+   	<a href="outexcel.asp?bigsort=<%=big%>&smallsort=<%=small%>" style="color:#F00">导出excel</a>	  </td>
 		  </form>
         </tr>
       </table>

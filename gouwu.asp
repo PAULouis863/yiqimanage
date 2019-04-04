@@ -78,7 +78,7 @@ rs.open strsql,conn,1,1
       <table border="0" cellspacing="1" cellpadding="4" align="center" width="100％" bgcolor="BDBDBC">
             <tr bgcolor="#FFFFFF" height="25" align="center"> 
             <td width="40">编 号</td>
-            <td width="300">影 片 名 称</td>
+            <td width="300">仪 器 名 称</td>
             <td width="40">数量</td>
 			 <td width="60">出租价格</td>
 			
@@ -116,10 +116,9 @@ set rs=nothing
 %> 
 <tr bgcolor="#FFFFFF"> 
  <td height="25" colspan="8" align="center" valign="middle">             
-                <input type="submit" name="order" value="更新影片"> &nbsp;&nbsp;&nbsp;
                 <input type="reset" name="payment" value="去收银台" onClick="window.location.href='shouyin.asp';"> 
                 &nbsp;&nbsp;&nbsp; 
-				&nbsp;&nbsp;<a href="gouwu.asp?ProductList=ProductList">清空购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;总计：<%=Sum%>
+				&nbsp;&nbsp;<a href="gouwu.asp?ProductList=ProductList">清空购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;<%if session("je")<100 Then response.Write("铜牌会员九折 总计："&Sum*0.9) else if  session("je")>100 and session("je")<500 Then response.Write("银牌会员八折 总计："&Sum*0.8)   else if   session("je")>500 Then response.Write("金牌会员七折 总计："&Sum*0.7)    end if %>
                 <input type="hidden" name="update" value="update">
 </td>
 </tr>

@@ -31,4 +31,4 @@ function filter_Str(InString)
 	NewStr=Replace(NewStr,"%"," ")
 	filter_Str=NewStr
 end function
-%>
+%> 

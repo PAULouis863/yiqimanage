@@ -82,6 +82,33 @@ function chk()
         </table>
 <%
 if request("action")="add" then
+
+
+
+
+sqls="select * from [user] where name='"&session("user")&"';"
+	set rss=Server.CreateObject("ADODB.Recordset")
+	rss.open sqls,conn,3,3
+	rss("xf")=rss("xf")+session("xf")
+
+	rss.update
+	rss.close
+	set rss=nothing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	sql="select * from [order]"
 	set rs=Server.CreateObject("ADODB.Recordset")
 	rs.open sql,conn,3,3
@@ -100,6 +127,8 @@ if request("action")="add" then
 	rs("songhuo")=trim(request("songhuo"))
 	rs("didanhao")=GetOrderNo(Now())	
 	rs("leaveword")=trim(request("leaveword"))
+    rs("xf")=session("je")
+    
 	rs.update
 	rs.close
 	set rs=nothing
@@ -114,42 +143,40 @@ strsql="select * from information where ID in ("&Session("ProductList")&") order
 rs.open strsql,conn,1,1
 %>
 <tr> <td>
-      <table border="0" cellspacing="1" cellpadding="4" align="center" width="96%" bgcolor="BDBDBC">
+      <table border="0" cellspacing="1" cellpadding="4" align="center" width="100％" bgcolor="BDBDBC">
             <tr bgcolor="#FFFFFF" height="25" align="center"> 
-            <td width="45">编 号</td>
-            <td width="194">商 品 名 称</td>
-            <td width="36">数量</td>
-			 <td width="54">出租价格</td>
-			 
-            
-			<td width="49">小 计</td>
+            <td width="40">编 号</td>
+            <td width="300">仪 器 名 称</td>
+            <td width="40">数量</td>
+			 <td width="60">出租价格</td>
+			
+            <td width="60">成交价</td>
+			<td width="70">小 计</td>
           </tr>
 <%
-Sum = 0
-Quatity = 1
+Sum = 0	
+Quatity = 1	
 Do While Not rs.EOF
-	i=i+1
-	Quatity = Request.Form( "Q_" & rs("ID"))
-	If Quatity <= 0 Then 
+	Quatity = Request.Form( "Q_" & rs("ID"))	
+	If Quatity <= 0 Then	
 		Quatity = Session(rs("ID"))
-		If Quatity <= 0 Then Quatity = 1
+		If Quatity <= 0 Then Quatity = 1	
 	End If
-	Session(rs("ID")) = Quatity
-	Dim YourPrice,strprice2,strvipprice,ProScore
-	YourPrice= rs("huiyuan")*LngDiscount
-	Sum = Sum + (YourPrice + rs("shichang"))*Quatity
+	Session(rs("ID")) = Quatity	
+	Sum = Sum + rs("shichang")*Quatity	
+    session("xf")=Sum
 %> 
           <tr bgcolor="#FFFFFF" height="25"align="center"> 
             <td><input type="CheckBox" name="ProdId" value="<%=rs("ID")%>" Checked></td>
-			 
-            <td align="left">&nbsp;<a href="product.asp?ID=<%=rs("ID")%>" target="_blank"><%=rs("mingcheng")%></a></td>
-            <td><input type="Text" name="<%="Q_" & rs("ID")%>" value="<%=Quatity%>" size="2" class="form"></td>
+			 <input type="hidden" name="shuliang" value="<%response.Write Quatity	%>">
+            <td align="left">&nbsp;<a href="lookpro.asp?ID=<%=rs("ID")%>" target="_blank"><%=rs("mingcheng")%></a></td>
+            <td><input type="Text" name="<%response.Write("Q_" & rs("ID")) %>" value="<%response.Write Quatity	%>" size="2" class="form"></td>
 			<td><%=rs("shichang")%></td>
-			
 			<td><%=rs("shichang")%></td>
-			<td><%=(YourPrice + strvipprice)*Quatity%></td>
+			<td><%=rs("shichang")%></td>
+			<td><%response.Write(rs("shichang")*Quatity)	%></td>
           </tr>
-			 <input type="hidden" name="shuliang" value="<%=Quatity%>">
+		  <input type="hidden" name="xiaoji" value="<%response.Write(rs("huiyuan")*Quatity)	%>">
 <%
 	rs.MoveNext
 	Loop
@@ -157,7 +184,11 @@ rs.close
 set rs=nothing
 %> 
 <tr bgcolor="#FFFFFF"> 
- <td height="25" colspan="8" align="center" valign="middle">&nbsp;</td>
+ <td height="25" colspan="8" align="center" valign="middle">             
+             
+           &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<%if session("je")<100 Then response.Write("铜牌会员九折 总计："&Sum*0.9) else if  session("je")>100 and session("je")<500 Then response.Write("银牌会员八折 总计："&Sum*0.8)   else if   session("je")>500 Then response.Write("金牌会员七折 总计："&Sum*0.7)    end if %>
+                <input type="hidden" name="update" value="update">
+</td>
 </tr>
       </table>
  </td>

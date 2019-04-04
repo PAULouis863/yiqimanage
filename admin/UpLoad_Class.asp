@@ -1,14 +1,4 @@
 <%
-'=========================================================
- 'Class: AnUpLoad
- 'Author: Anlige
- 'Version:AienAspUpload V13.01.16
- 'CreationDate: 2008-04-12
- 'ModificationDate: 2013-01-23
- 'Homepage: http://dev.mo.cn
- 'Email: zhanghuiguoanlige@126.com
- 'QQ: 1034555083
-'=========================================================
 Dim StreamT
 Class AnUpLoad
 	Private Form, Fils

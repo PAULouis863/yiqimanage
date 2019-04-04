@@ -78,7 +78,7 @@ end if
 %>
 <table width="98%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#799AE1">
   <tr>
-    <td align="center"><font color="#FFFFFF">管理影片分类</font></td>
+    <td align="center"><font color="#FFFFFF">管理仪器分类</font></td>
   </tr>
   <tr>
     <td valign="top" bgcolor="#FFFFFF"><br>
@@ -89,7 +89,7 @@ end if
             <td width="155"><font color="#FF0000">所属大类</font></td>
             <td width="155"><font color="#FF0000">修改</font></td>
             <td width="150"><font color="#FF0000">操作</font></td>
-            <td width="160"><font color="#FF0000">添加影片</font></td>
+            <td width="160"><font color="#FF0000">添加仪器</font></td>
           </tr>
 <%
 if request("bigclassid")<>"" then	'判断是否指定大类
@@ -134,7 +134,7 @@ set rs3=nothing
 			  </td>
               <td><input name="submit" type="submit" value="修改"></td>
               <td><a href="class.asp?action=del&id=<%=rs("id")%>&bigclassid=<%=rs("bigclassid")%>">删除</a></td>
-              <td><a href="addpro.asp?bigclassid=<%=rs("bigclassid")%>&classid=<%=rs("id")%>">添加影片</a></td>
+              <td><a href="addpro.asp?bigclassid=<%=rs("bigclassid")%>&classid=<%=rs("id")%>">添加仪器</a></td>
             </tr>
 <input name="id" type="hidden" value="<%=rs("id")%>">
 <input name="action" type="hidden" value="update">
@@ -150,7 +150,7 @@ loop
 <br>
 <table width="98%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#799AE1">
   <tr>
-    <td align="center"><font color="#FFFFFF">添加影片分类</font></td>
+    <td align="center"><font color="#FFFFFF">添加仪器分类</font></td>
   </tr>
   <tr>
     <td valign="top" bgcolor="#FFFFFF"><br>

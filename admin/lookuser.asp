@@ -33,41 +33,41 @@ if not rs.eof then
 %>
 <table width="98%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#799AE1">
 <form name="myform" action="lookuser.asp" method="post">  <tr> 
-    <td align="center"><font color="#FFFFFF">查看会员信息</font></td>
+    <td align="center"><font color="#FFFFFF">查看用户信息</font></td>
   </tr>
   <tr>
     <td valign="top" bgcolor="#FFFFFF"><br> 
       <table width="60%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="799AE1">
         <tr height="20" bgcolor="#FFFFFF" align="center"> 
-          <td width="19%">用&nbsp;户&nbsp;名：</td>
+          <td width="19%">用 户 名：</td>
           <td width="81%"><div align="left"><%=rs("name")%></div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>密&nbsp;&nbsp;&nbsp; 码：</td>
+          <td> 密&nbsp;码：</td>
           <td><div align="left">
             <input name="pass" type="password" size="33" value="<%=rs("pass")%>">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>电子邮件：</td>
+          <td> 电子邮件：</td>
           <td><div align="left">
             <input name="mail" type="text" value="<%=rs("mail")%>" size="30">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>邮&nbsp;&nbsp;&nbsp;&nbsp;编：</td>
+          <td>邮&nbsp;&nbsp;&nbsp;编：</td>
           <td><div align="left">
             <input name="youbian" type="text" value="<%=rs("youbian")%>" size="30">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>姓&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+          <td>姓&nbsp;&nbsp;&nbsp;名：</td>
           <td><div align="left">
             <input name="xingming" type="text" value="<%=rs("xingming")%>" size="30">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>电&nbsp;&nbsp;&nbsp;&nbsp;话：</td>
+          <td>电&nbsp;&nbsp;&nbsp;话：</td>
           <td><div align="left">
             <input name="tel" type="text" value="<%=rs("tel")%>" size="30">
           </div></td>
@@ -79,25 +79,25 @@ if not rs.eof then
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>地&nbsp;&nbsp;&nbsp;&nbsp;址：</td>
+          <td>地&nbsp;&nbsp;&nbsp;址：</td>
           <td><div align="left">
             <input name="dizhi" type="text" value="<%=rs("dizhi")%>" size="30">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>联系&nbsp;&nbsp;QQ：</td>
+          <td>联 系 QQ：</td>
           <td><div align="left">
             <input name="qq" type="text" value="<%=rs("qq")%>" size="30">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>提&nbsp;&nbsp;&nbsp;&nbsp;示：</td>
+          <td>提&nbsp;&nbsp;&nbsp;示：</td>
           <td><div align="left">
             <input name="tishi" type="text" value="<%=rs("tishi")%>" size="30">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">
-          <td>回&nbsp;&nbsp;&nbsp;&nbsp;答：</td>
+          <td>回&nbsp;&nbsp;&nbsp;答：</td>
           <td><div align="left">
             <input name="huida" type="password" value="<%=rs("huida")%>" size="33">
           </div></td>

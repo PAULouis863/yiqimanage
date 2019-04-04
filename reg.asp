@@ -31,6 +31,7 @@ if request("action")="add" then
 	rs("dizhi")=trim(request("dizhi"))
 	rs("shijian1")=now()	
 	rs("cishu")="0"	
+    rs("dengji")="Õ≠≈∆ª·‘±"	
 	rs.update
 	rs.close
 	set rs=nothing

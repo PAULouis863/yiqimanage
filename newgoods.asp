@@ -63,7 +63,7 @@ else
               
 				  <tr>
                   <td height="16">&nbsp;</td>
-                    <td><span class="style2">¡¾<a href="gouwu.asp?ProdId=<%=rs("id")%>">×â½èÓ°Æ¬</a>¡¿</span></td>
+                    <td><span class="style2">¡¾<a href="gouwu.asp?ProdId=<%=rs("id")%>">×â½èÒÇÆ÷</a>¡¿</span></td>
                 </tr>
                   <tr>
                     <td height="16">&nbsp;</td>

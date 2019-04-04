@@ -16,8 +16,13 @@ if not rs.eof then
 	if rs("pass")=md5(trim(request("pass"))) then
 		session("shijian")=rs("shijian2")
 		session("cishu")=rs("cishu")
+
+        session("je")=rs("xf")
+
+
 		session("user")=trim(request("user"))	
 		rs("shijian2")=now()	
+
 		rs("cishu")=rs("cishu")+1	
 		rs.update
 		response.Redirect("index.asp")	
@@ -36,5 +41,5 @@ else
 	response.End() 
 end if
 rs.close
-set rs=nothing
+set rs=nothing 
 %>

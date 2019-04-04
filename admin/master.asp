@@ -74,7 +74,7 @@ end if
 %>
 <table width="98%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#799AE1">
   <tr> 
-    <td align="center"><font color="#FFFFFF">查看后台用户</font></td>
+    <td align="center"><font color="#FFFFFF">查看后台管理员</font></td>
   </tr>
   <tr> 
     <td valign="top" bgcolor="#FFFFFF"><br> 
@@ -138,7 +138,7 @@ end if
 rs.close
 set rs=nothing
 %>
-		    </div></td>
+		&nbsp;<a href="outexcel4.asp" style="color:#F00">导出excel</a>    </div></td>
         </form></tr>
 </table>
       <br></td>
@@ -150,7 +150,7 @@ set rs=nothing
 
 <table width="98%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#799AE1">
  <tr> 
-    <td align="center"><font color="#FFFFFF">添加后台用户</font></td>
+    <td align="center"><font color="#FFFFFF">添加后台管理员</font></td>
   </tr>
   <tr> 
     <td valign="top" bgcolor="#FFFFFF"><br> 
@@ -165,7 +165,7 @@ set rs=nothing
         <tr height="20" bgcolor="#FFFFFF" align="center">
           <td>密&nbsp;&nbsp;码：</td>
           <td><div align="left">
-            <input name="pass" type="password" size="21">
+            <input name="pass" type="password" size="20">
           </div></td>
         </tr>
         <tr height="20" bgcolor="#FFFFFF" align="center">

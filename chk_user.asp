@@ -8,4 +8,4 @@ else
 		response.Write("<script>alert('ÇëÏÈµÇÂ¼£¡');parent.window.location.href='index.asp';</script>")	
 	end if
 end if
-%>
+%> 
