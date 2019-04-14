@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-<title>音像租赁管理系统</title>
+<title>仪器租赁管理系统</title>
 </head>
 <body>
 <!--#include file="include/conn.asp" -->
